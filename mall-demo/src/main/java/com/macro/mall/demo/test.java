@@ -5,4 +5,5 @@ package com.macro.mall.demo;
  * @date 2024/2/10 13:27
  */
 public class test {
+    int i=1;
 }
