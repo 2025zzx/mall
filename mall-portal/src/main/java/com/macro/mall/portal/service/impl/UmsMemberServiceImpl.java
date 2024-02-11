@@ -80,7 +80,7 @@ public class UmsMemberServiceImpl implements UmsMemberService {
         if(!verifyAuthCode(authCode,telephone)){
             Asserts.fail("验证码错误");
         }
-        //查询是否已有该用户
+//        查询是否已有该用户
         UmsMemberExample example = new UmsMemberExample();
         example.createCriteria().andUsernameEqualTo(username);
         example.or(example.createCriteria().andPhoneEqualTo(telephone));
@@ -183,6 +183,8 @@ public class UmsMemberServiceImpl implements UmsMemberService {
     public String refreshToken(String token) {
         return jwtTokenUtil.refreshHeadToken(token);
     }
+
+
 
     //对输入的验证码进行校验
     private boolean verifyAuthCode(String authCode, String telephone){
